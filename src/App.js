@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Pages/Shared/Header/Header';
+import { Routes, Route } from "react-router-dom";
+import Students from './Pages/Students/Students';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Header></Header>
+      <Routes>
+        <Route path='/students' element={<Students></Students>}></Route>
+      </Routes>
     </div>
   );
 }
